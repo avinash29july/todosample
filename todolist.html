@@ -1,0 +1,31 @@
+<div class="row">
+    <div class="col-md-8 col-sm-12 col-xs-12 col-md-offset-2">
+        <div class="input-group box-shadow-addon">
+            <textarea class="form-control" ng-model="todoText" placeholder="Enter new ToDo item" maxlength="140" ></textarea>
+            <span class="input-group-addon button-custom green" id="basic-addon2" ng-click="addTodo()">Add Task</span>
+        </div>
+    </div>
+    <div class="height-20" style="clear: both"></div>
+    <div class="col-md-8 col-xs-12 col-sm-12 col-md-offset-2" ng-repeat="todo in todos track by $index" style="margin-bottom: 10px;">
+        <div class="col-md-12 col-sm-12 col-xs-12 div-info-list box-shadow-addon" ng-class="{'bg-grey':todo.done}">
+            <div class="pull-right">
+                <button class="btn btn-default btn-xs btn" ng-click="todo.done = !todo.done" ng-class="{'btn-success':todo.done,'btn-warning':!todo.done }">
+                    <span class="glyphicon glyphicon-ok " aria-hidden="true" tooltip="Mark As Complete" ng-show="todo.done"></span>
+                    <span class="glyphicon glyphicon-remove" aria-hidden="true" tooltip="Mark As Incomplete" ng-show="!todo.done"></span>
+                </button>
+                <button class="btn btn-default btn-xs btn-danger" ng-click="deleteTodo()" tooltip="Delete Todo" >
+                    <span class="glyphicon glyphicon-trash" aria-hidden="true" ></span>
+                </button>
+            </div>
+            <div class="clearfix" style="border-bottom: 1px solid #ccc;padding-bottom: 5px"></div>
+            <div>
+                <p style="word-break:break-all ; line-height:26px;">
+                    <span class="done-{{ todo.done }}">{{ todo.text }}</span>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

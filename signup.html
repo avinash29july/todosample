@@ -1,0 +1,34 @@
+<div class="clearfix"></div>
+<div class="row">
+    <div class="clearfix height-30"></div>
+    <div class="col-md-8 col-sm-12 col-xs-12 ">
+        <div class="box-shadow-addon" style="background:#AEC234; padding:165px 12px;text-align: center;">
+            <h1>Sample Todo</h1>
+        </div>
+    </div>
+    <div class="col-md-4 col-sm-6 col-xs-12 ">
+        <div class="box-shadow-addon" style="border-radius: 3px; border: 1px solid #ccc;padding: 10px 12px; background: #FFF;">
+            <div class="clearfix height-30"></div>
+            <div align="center">
+                <img src="img/login.png" height="140" width="140" alt="Login" />
+            </div>
+            <div class="clearfix height-30"></div>
+            <form ng-submit="SignIn()"  name="form1">
+                <h5>
+                    User Name
+                </h5>
+                <input type="text" ng-model="username" required placeholder="Enter User name" class="form-control"/>
+                <span class="has-error"></span>
+                <h5>
+                    Password
+                </h5>
+                <input type="password" ng-model="password"  placeholder="Enter Password" required class="form-control"/>
+                <div class="clearfix height-10"></div>
+                <button class="btn btn-default btn-sm btn-success"  type="submit" >Sign In</button>
+                <span class="error"></span>
+            </form>
+        </div>
+    </div>
+</div>
+<div class=" height-30"></div>
+
