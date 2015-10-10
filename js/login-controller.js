@@ -3,7 +3,7 @@
  */
 todoApp.controller('loginController',  function ($scope,$location) {
     $scope.SignIn = function() {
-        localStorage.setItem('Uname','MRCLIENT'); // User name added to local storage
+        localStorage.setItem('Uname','Mrbean'); // User name added to local storage
         localStorage.setItem('Upass','Admin123'); // Password name added to local storage
         var UN = localStorage.getItem('Uname');
         var UP = localStorage.getItem('Upass');
