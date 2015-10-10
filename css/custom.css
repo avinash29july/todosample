@@ -54,7 +54,7 @@ body {
 }
 .button-custom.green { background: #67b600; }
 .div-info-list {
-    background: #FFD180;
+    background: rgba(12,232,142,0.3);
     color: #000000;
     border-radius: 3px;
     -webkit-border-radius: 3px;

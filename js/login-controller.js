@@ -7,10 +7,12 @@ todoApp.controller('loginController',  function ($scope,$location) {
         localStorage.setItem('Upass','Admin123'); // Password name added to local storage
         var UN = localStorage.getItem('Uname');
         var UP = localStorage.getItem('Upass');
+
         if($scope.username === UN && $scope.password===UP){
             $scope.username =UN;
             $scope.password=UP;
             $location.path('/todo');
+
 
         }else{
             $('span.error').text("Invalid Credential")
